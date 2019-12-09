@@ -1,0 +1,16 @@
+{% extends 'music/base.html' %}
+	{% block body %}
+	  			{% if all_albums %}
+					<div class="alert alert-primary" role="alert">
+						 Here are all my albums !
+					</div>
+    				<u1>
+        				{% for brand in all_albums %}
+            				<li><a href="{% url 'Music:details' album.id%}">{{brand.brand_title}}</a> </li>
+        				{% endfor %}
+    				</u1>
+				{% else %}
+    				<h3>You don't have any Brands</h3>
+				{% endif %}
+    {% endblock %}
+

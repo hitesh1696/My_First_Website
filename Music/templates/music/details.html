@@ -1,0 +1,13 @@
+{% extends 'music/base.html' %}
+{% block body%}
+        <img src="{{ album.album_logo}}">
+
+        <h1>{{ brand.brand_title }}</h1>
+        <h3>{{ brand.brand }}</h3>
+
+        <ul>
+            {% for type in brand.brand_set.all %}
+                <li>{{ brand.brand_title }} - {{ brand.brand_type }}</li>
+            {% endfor %}
+        </ul>
+{% endblock %}
